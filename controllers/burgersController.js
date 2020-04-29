@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "sleepy"
+    "name", "devoured"
   ], [
     req.body.name, req.body.sleepy
   ], function(result) {
@@ -41,7 +41,7 @@ router.put("/api/burgers/:id", function(req, res) {
     } else {
       res.status(200).end();
     }
-  });
+  }); 
 });
 
 router.delete("/api/burgers/:id", function(req, res) {
