@@ -32,25 +32,21 @@ li {
   margin-bottom: 5px;
 }
 
-.frog {
-  height: 200px;
-  width: 200px;
-}
-
-.add {
+.card {
   margin: 10px;
 }
 
-.disp-card {
-  margin-bottom: 25px;
-}
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  margin-top: 40px;
+@media only screen and (max-width: 989px) {
+
+  body, html {
+    height: 100%;
+    margin: 0px;
+    background-image: url('/assets/images/frog1.jpg');
+    background-position: center;
+    background-repeat: inherit;
+    background-size: cover;
+    font-family: 'Jost', sans-serif;
+  }
+
 }
