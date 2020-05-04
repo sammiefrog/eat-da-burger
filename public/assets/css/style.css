@@ -15,7 +15,8 @@ li {
 }
 
 .list-group-item {
-  font-style: bold;
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 
 .label {
@@ -36,6 +37,10 @@ li {
   margin: 10px;
 }
 
+.eat {
+  height: 50px;
+  width: 60px;
+}
 
 @media only screen and (max-width: 989px) {
 

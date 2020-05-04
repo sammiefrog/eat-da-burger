@@ -1,10 +1,16 @@
 
-<li class="list-group-item bg-light">
-	{{burger_name}}
 
-	<button class="change-devoured btn btn-warning btn-sm" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}EAT UP!{{else}}REGURGITATE!{{/if}}
-	</button>
+<li class="list-group-item bg-light text-center">
+		{{burger_name}}
 
-	<image class="delete-burger" src="../assets/images/004-bin.png" data-id="{{this.id}}"></image>
+	<div class="change-devoured text-center" data-id="{{id}}" data-newdevoured="{{devoured}}">
+
+		{{#if devoured}}<img class="eat" src="../assets/images/eating.png" alt="eating frog"> {{else}} <button class=" btn bg-warning btn-sm">REGURGITATE!</button>{{/if}}
+
+		<image class="delete-burger" src="../assets/images/004-bin.png" data-id="{{this.id}}">
+
+	</div>
+
+	
 </li>
+
