@@ -1,10 +1,10 @@
 
-<li class="list-group-item">
+<li class="list-group-item bg-light">
 	{{burger_name}}
 
 	<button class="change-devoured btn btn-warning btn-sm" data-id="{{id}}" data-newdevoured="{{devoured}}">
 		{{#if devoured}}EAT UP!{{else}}REGURGITATE!{{/if}}
 	</button>
 
-	<button class="delete-burger btn btn-danger btn-sm" data-id="{{this.id}}">DELETE!</button>
+	<image class="delete-burger" src="../assets/images/004-bin.png" data-id="{{this.id}}"></image>
 </li>

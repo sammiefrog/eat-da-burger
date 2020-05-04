@@ -14,6 +14,10 @@ li {
   background: #faebd7;
 }
 
+.list-group-item {
+  font-style: bold;
+}
+
 .label {
   font-weight: bold;
 }
@@ -33,12 +37,12 @@ li {
   width: 200px;
 }
 
-/* .container {
-  display: flex;
-  justify-content: left;
-} */
 .add {
   margin: 10px;
+}
+
+.disp-card {
+  margin-bottom: 25px;
 }
 
 .footer {
@@ -48,5 +52,5 @@ li {
   width: 100%;
   color: white;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
