@@ -1,64 +1,64 @@
-<div class="jumbotron bg-transparent">
-  {{!-- <img src="/assets/images/nerdfrogburger.jpg" alt="frog with burger" class="img-thumbnail frog"> --}}
-<h1 class="display-4 text-center">Frog Burgers!</h1>
-{{!-- <img src="/assets/images/frog1.jpeg" alt="frog with burger" class=""> --}}
-  
 
-</div>
+<h1 class="display-3 text-white text-left">Feed the Frog a Burger!</h1>
 
 <div class="row">
-<div class="col-md-4">
-  <div class="card border-success mb-3">
-<div class="card-header">Burgers that are not devoured!</div>
-<div class="card-body text-success">
-<ul class="list-group">
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burger/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-</div>
-</div>
-</div>
+  <div class="col-md-8 d-flex justify-content-center">
+    <div class="card add border-success text-center" style="width: 24rem;">
+      <div class="card-header">Add a Burger</div>
+      <div class="card-body text-success">
+        <form class="create-form">
 
-<div class="col-md-4">
-  <div class="card">
-  <div class="card-header">Add a Burger</div>
-  <div class="card-body text-success">
-  <form class="create-form">
+          <div class="form-group input-group input-group-sm">
+            <label for="ca">Burger Name:</label>
+            <input class="form-control" type="text" id="ca" name="burger_name">
+          </div>
 
-    <div class="form-group input-group">
-      <label for="ca">Burger Name:</label>
-      <input class="form-control" type="text" id="ca" name="burger_name">
+          <div class="form-group">
+            <label for="devoured">Select the Status of this Burger:</label><br>
+            <input class="form-check-input text-center" type="radio" name="devoured" value="1" checked>Already Devoured!<br>
+            <input class="form-check-input text-center" type="radio" name="devoured" value="0"> Ready to be inhaled!
+          </div>
+
+          <button class="btn btn-success btn-sm" type="submit">Add Burger</button>
+        </form>
+      </div>
     </div>
-
-    <div class="form-group">
-      <label for="devoured">Select the Status of this Burger:</label><br>
-      <input class="form-check-input" type="radio" name="devoured" value="1" checked>Already Devoured!<br>
-      <input class="form-check-input" type="radio" name="devoured" value="0"> Ready to be inhaled!
-    </div>
-
-    <button class="btn btn-success" type="submit">Add Burger</button>
-  </form>
   </div>
-</div>
-</div>
+  <div class="col-md-4"></div>
 
-<div class="col-md-4">
-<div class="card">
-<div class="card-header">Burgers that are devoured!</div>
-<div class="card-body text-success">
-<ul class="list-group">
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burger/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+  {{!-- end of row --}}
 </div>
-</div>
-{{!-- end of column --}}
-</div>
-{{!-- end of row --}}
+<div class="row">
+  <div class="col-md-4">
+    <div class="card border-success" style="width: 20rem;">
+      <div class="card-header">Burgers that are not devoured!</div>
+      <div class="text-success">
+        <ul class="list-group list-group-flush">
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burger/burger-block devoured=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card border-success" style="width: 20rem;">
+      <div class="card-header">Burgers that are devoured!</div>
+      <div class="text-success">
+        <ul class="list-group list-group-flush">
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burger/burger-block devoured=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{!-- end of column --}}
+  </div>
+  <div class="col-md-4"></div>
+  {{!-- end of row --}}
 </div>
