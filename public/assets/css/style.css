@@ -14,9 +14,20 @@ li {
   background: #faebd7;
 }
 
+.head {
+  color: whitesmoke;
+  font-family: 'Luckiest Guy', cursive;
+}
+
 .list-group-item {
   font-size: 20px;
   letter-spacing: 4px;
+  background-color: #FFFF99;
+}
+
+.card-header {
+  font-size: 21px;
+  letter-spacing: 2px;
 }
 
 .label {
@@ -35,6 +46,7 @@ li {
 
 .card {
   margin: 10px;
+  background-color: #FFFF99;
 }
 
 .eat {
